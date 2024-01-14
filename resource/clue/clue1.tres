@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://unbxsu1cqbp0"]
+
+[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_v4ctq"]
+
+[resource]
+script = ExtResource("1_v4ctq")
