@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://bq83quxdo2bwc"]
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://cc00858sgg2d0"]
 
-[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_bhby8"]
+[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_fhxro"]
 
 [resource]
-script = ExtResource("1_bhby8")
-id = 18
-get_from_place_id = 5
+script = ExtResource("1_fhxro")
+id = 19
+get_from_place_id = 4
 get_from_clues_id = Array[int]([])
-text = "老布是抓间谍"
+text = "女儿是小帅妻子"

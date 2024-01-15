@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_rfdqv")
-id = 6
-get_from_place_id = 3
-get_from_clues_id = Array[int]([])
-text = "盖子盒子颜色弄错"
+id = 7
+get_from_place_id = -1
+get_from_clues_id = Array[int]([5, 6])
+text = "有人盖错了盖子"

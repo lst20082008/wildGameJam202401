@@ -4,3 +4,7 @@
 
 [resource]
 script = ExtResource("1_v4ctq")
+id = 0
+get_from_place_id = 8
+get_from_clues_id = Array[int]([])
+text = "心肌梗死"

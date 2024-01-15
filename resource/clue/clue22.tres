@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://l3o1x8wq164u"]
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://boqkidhv0aqsx"]
 
 [ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_kj1kh"]
 
@@ -7,4 +7,4 @@ script = ExtResource("1_kj1kh")
 id = 22
 get_from_place_id = 3
 get_from_clues_id = Array[int]([])
-text = "母亲爱国者"
+text = "小帅是杀害妻子的凶手"

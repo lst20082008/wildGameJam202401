@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_bo82u")
-id = 6
-place_name = "伯爵家"
+id = 7
+place_name = "小美家"
 position = Vector2(0, 0)
 clues = []

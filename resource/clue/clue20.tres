@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://cc00858sgg2d0"]
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://b5dr0woq425a1"]
 
-[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_fhxro"]
+[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_mi3o6"]
 
 [resource]
-script = ExtResource("1_fhxro")
-id = 19
+script = ExtResource("1_mi3o6")
+id = 20
 get_from_place_id = 4
 get_from_clues_id = Array[int]([])
-text = "女儿是小帅妻子"
+text = "收/放照片"
