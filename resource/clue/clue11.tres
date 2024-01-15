@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://bgqc6dj518o0o"]
+
+[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_vh3hy"]
+
+[resource]
+script = ExtResource("1_vh3hy")
+id = 11
+get_from_place_id = -1
+get_from_clues_id = Array[int]([7, 10])
+text = "母亲盖错了盖子"

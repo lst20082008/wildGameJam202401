@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Place" load_steps=2 format=3 uid="uid://7ebsp5bg64y2"]
+
+[ext_resource type="Script" path="res://script/resource/Place.gd" id="1_5und4"]
+
+[resource]
+script = ExtResource("1_5und4")
+id = 0
+place_name = "巧克力店"
+position = Vector2(0, 0)
+clues = []

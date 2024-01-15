@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://dj78vsxltblth"]
+
+[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_rfdqv"]
+
+[resource]
+script = ExtResource("1_rfdqv")
+id = 6
+get_from_place_id = 3
+get_from_clues_id = Array[int]([])
+text = "盖子盒子颜色弄错"

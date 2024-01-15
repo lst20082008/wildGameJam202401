@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://deobb5uulipbc"]
+
+[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_1wv0a"]
+
+[resource]
+script = ExtResource("1_1wv0a")
+id = 3
+get_from_place_id = 0
+get_from_clues_id = Array[int]([])
+text = "家里的药不足"

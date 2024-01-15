@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://drl8mnjw6t3rd"]
+
+[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_xwxfd"]
+
+[resource]
+script = ExtResource("1_xwxfd")
+id = 17
+get_from_place_id = 4
+get_from_clues_id = Array[int]([])
+text = "与小帅竞争下一任市长"

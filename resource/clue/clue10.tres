@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://bnrxh1fufc0jx"]
+
+[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_wjhws"]
+
+[resource]
+script = ExtResource("1_wjhws")
+id = 10
+get_from_place_id = -1
+get_from_clues_id = Array[int]([8, 9])
+text = "母亲眼神不好"

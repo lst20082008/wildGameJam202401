@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://cdm5aw3vrnjtn"]
+
+[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_yep6n"]
+
+[resource]
+script = ExtResource("1_yep6n")
+id = 0
+get_from_place_id = -1
+get_from_clues_id = Array[int]([0, 1])
+text = "小帅可能是被硝酸甘油药死的"

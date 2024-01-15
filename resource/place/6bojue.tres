@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Place" load_steps=2 format=3 uid="uid://u058gdh7vr6y"]
+
+[ext_resource type="Script" path="res://script/resource/Place.gd" id="1_x523a"]
+
+[resource]
+script = ExtResource("1_x523a")
+id = 5
+place_name = "老布家"
+position = Vector2(0, 0)
+clues = []

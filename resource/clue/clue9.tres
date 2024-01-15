@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://dl1bstsuyigmt"]
+
+[ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_o3ymn"]
+
+[resource]
+script = ExtResource("1_o3ymn")
+id = 9
+get_from_place_id = 1
+get_from_clues_id = Array[int]([])
+text = "青/红苹果颜色弄错"
