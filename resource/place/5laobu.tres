@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="Place" load_steps=2 format=3 uid="uid://bkqw6p1t6a0sg"]
+[gd_resource type="Resource" script_class="Place" load_steps=5 format=3 uid="uid://bkqw6p1t6a0sg"]
 
 [ext_resource type="Script" path="res://script/resource/Place.gd" id="1_ds0vr"]
+[ext_resource type="PackedScene" uid="uid://dahymgcuo5s3t" path="res://scene/game/testGameScene.tscn" id="1_mekpk"]
+[ext_resource type="Resource" uid="uid://d2wyd4822uhtv" path="res://resource/clue/clue14.tres" id="1_u0cc7"]
+[ext_resource type="Resource" uid="uid://bq83quxdo2bwc" path="res://resource/clue/clue18.tres" id="2_tucte"]
 
 [resource]
 script = ExtResource("1_ds0vr")
 id = 5
 place_name = "老布家"
 position = Vector2(0, 0)
-clues = []
+clues = Array[Resource("res://script/resource/Clue.gd")]([ExtResource("1_u0cc7"), ExtResource("2_tucte")])
+next_scene = ExtResource("1_mekpk")
+open_type = 2
+addtional_overload = 0

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_kj1kh")
-id = 22
+id = 21
 get_from_place_id = 3
 get_from_clues_id = Array[int]([])
 text = "母亲爱国者"

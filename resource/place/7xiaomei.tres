@@ -1,10 +1,15 @@
-[gd_resource type="Resource" script_class="Place" load_steps=2 format=3 uid="uid://dvokk7ymn4e58"]
+[gd_resource type="Resource" script_class="Place" load_steps=4 format=3 uid="uid://dvokk7ymn4e58"]
 
 [ext_resource type="Script" path="res://script/resource/Place.gd" id="1_bo82u"]
+[ext_resource type="PackedScene" uid="uid://dahymgcuo5s3t" path="res://scene/game/testGameScene.tscn" id="1_gf2w3"]
+[ext_resource type="Resource" uid="uid://djmoa8ywji6cx" path="res://resource/clue/clue15.tres" id="1_xynxa"]
 
 [resource]
 script = ExtResource("1_bo82u")
 id = 7
 place_name = "小美家"
 position = Vector2(0, 0)
-clues = []
+clues = Array[Resource("res://script/resource/Clue.gd")]([ExtResource("1_xynxa")])
+next_scene = ExtResource("1_gf2w3")
+open_type = 2
+addtional_overload = 0

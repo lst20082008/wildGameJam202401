@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="Place" load_steps=2 format=3 uid="uid://cpxf3rsjos36r"]
+[gd_resource type="Resource" script_class="Place" load_steps=5 format=3 uid="uid://cpxf3rsjos36r"]
 
+[ext_resource type="Resource" uid="uid://clg4cbwbhq7k0" path="res://resource/clue/clue1.tres" id="1_8ek16"]
 [ext_resource type="Script" path="res://script/resource/Place.gd" id="1_mv52r"]
+[ext_resource type="PackedScene" uid="uid://dahymgcuo5s3t" path="res://scene/game/testGameScene.tscn" id="1_v632p"]
+[ext_resource type="Resource" uid="uid://c8oakdgilabj5" path="res://resource/clue/clue13.tres" id="2_byqp2"]
 
 [resource]
 script = ExtResource("1_mv52r")
 id = 2
 place_name = "药店"
 position = Vector2(0, 0)
-clues = []
+clues = Array[Resource("res://script/resource/Clue.gd")]([ExtResource("1_8ek16"), ExtResource("2_byqp2")])
+next_scene = ExtResource("1_v632p")
+open_type = 2
+addtional_overload = 0

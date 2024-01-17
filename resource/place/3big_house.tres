@@ -1,10 +1,17 @@
-[gd_resource type="Resource" script_class="Place" load_steps=2 format=3 uid="uid://2i4e3knogki5"]
+[gd_resource type="Resource" script_class="Place" load_steps=6 format=3 uid="uid://2i4e3knogki5"]
 
+[ext_resource type="Resource" uid="uid://l3o1x8wq164u" path="res://resource/clue/clue21.tres" id="1_fxs0x"]
 [ext_resource type="Script" path="res://script/resource/Place.gd" id="1_qrho3"]
+[ext_resource type="PackedScene" uid="uid://dahymgcuo5s3t" path="res://scene/game/testGameScene.tscn" id="1_xofhk"]
+[ext_resource type="Resource" uid="uid://boqkidhv0aqsx" path="res://resource/clue/clue22.tres" id="2_4pthf"]
+[ext_resource type="Resource" uid="uid://doxhler5gjxly" path="res://resource/clue/clue6.tres" id="3_5wfdx"]
 
 [resource]
 script = ExtResource("1_qrho3")
 id = 3
 place_name = "豪宅"
 position = Vector2(0, 0)
-clues = []
+clues = Array[Resource("res://script/resource/Clue.gd")]([ExtResource("1_fxs0x"), ExtResource("2_4pthf"), ExtResource("3_5wfdx")])
+next_scene = ExtResource("1_xofhk")
+open_type = 0
+addtional_overload = 0

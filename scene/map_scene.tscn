@@ -1,3 +1,97 @@
-[gd_scene format=3 uid="uid://dmgo8jj5qmu1s"]
+[gd_scene load_steps=8 format=3 uid="uid://dmgo8jj5qmu1s"]
+
+[ext_resource type="Script" path="res://script/map_scene.gd" id="1_8c8kr"]
+[ext_resource type="Texture2D" uid="uid://dw7giu187fyoh" path="res://image/map_light.jpg" id="2_37qan"]
+[ext_resource type="Script" path="res://script/ClickableSprite2D.gd" id="2_skelq"]
+
+[sub_resource type="Gradient" id="Gradient_xyhct"]
+colors = PackedColorArray(0.215902, 0.215902, 0.215902, 1, 0.201527, 0.201527, 0.201527, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g6bhs"]
+gradient = SubResource("Gradient_xyhct")
+
+[sub_resource type="Gradient" id="Gradient_jv8wr"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_47q10"]
+gradient = SubResource("Gradient_jv8wr")
 
 [node name="map_scene" type="Node2D"]
+script = ExtResource("1_8c8kr")
+day_map = ExtResource("2_37qan")
+night_map = SubResource("GradientTexture2D_g6bhs")
+
+[node name="map_sprite" type="Sprite2D" parent="."]
+position = Vector2(607, 401)
+scale = Vector2(0.910875, 0.531707)
+texture = ExtResource("2_37qan")
+
+[node name="test" type="Sprite2D" parent="."]
+position = Vector2(500, 100)
+scale = Vector2(10, 10)
+
+[node name="places" type="Node2D" parent="."]
+
+[node name="0cocoa" type="Sprite2D" parent="places"]
+position = Vector2(232.5, 219)
+scale = Vector2(1.10938, 0.84375)
+texture = SubResource("GradientTexture2D_47q10")
+script = ExtResource("2_skelq")
+
+[node name="1super" type="Sprite2D" parent="places"]
+position = Vector2(189, 401.5)
+scale = Vector2(2, 2.79688)
+texture = SubResource("GradientTexture2D_47q10")
+script = ExtResource("2_skelq")
+
+[node name="2drug_store" type="Sprite2D" parent="places"]
+position = Vector2(215, 515.5)
+scale = Vector2(1.46875, 0.578125)
+texture = SubResource("GradientTexture2D_47q10")
+script = ExtResource("2_skelq")
+
+[node name="3big_hourse" type="Sprite2D" parent="places"]
+position = Vector2(828.5, 380.5)
+scale = Vector2(3.92188, 3.29688)
+texture = SubResource("GradientTexture2D_47q10")
+script = ExtResource("2_skelq")
+
+[node name="4bar" type="Sprite2D" parent="places"]
+position = Vector2(493, 341.5)
+scale = Vector2(0.84375, 0.796875)
+texture = SubResource("GradientTexture2D_47q10")
+script = ExtResource("2_skelq")
+
+[node name="5laobu" type="Sprite2D" parent="places"]
+position = Vector2(490, 283.5)
+scale = Vector2(0.8125, 0.703125)
+texture = SubResource("GradientTexture2D_47q10")
+script = ExtResource("2_skelq")
+
+[node name="6bojue" type="Sprite2D" parent="places"]
+position = Vector2(448, 454)
+texture = SubResource("GradientTexture2D_47q10")
+script = ExtResource("2_skelq")
+
+[node name="7xiaomei" type="Sprite2D" parent="places"]
+position = Vector2(401, 565.5)
+scale = Vector2(0.96875, 0.703125)
+texture = SubResource("GradientTexture2D_47q10")
+script = ExtResource("2_skelq")
+
+[node name="8hotel" type="Sprite2D" parent="places"]
+position = Vector2(207.5, 562)
+scale = Vector2(1.45313, 0.53125)
+texture = SubResource("GradientTexture2D_47q10")
+script = ExtResource("2_skelq")
+
+[connection signal="on_clicked" from="places/0cocoa" to="." method="_on_cocoa_on_clicked"]
+[connection signal="on_clicked" from="places/1super" to="." method="_on_super_on_clicked"]
+[connection signal="on_clicked" from="places/2drug_store" to="." method="_on_drug_store_on_clicked"]
+[connection signal="on_clicked" from="places/3big_hourse" to="." method="_on_big_hourse_on_clicked"]
+[connection signal="on_clicked" from="places/4bar" to="." method="_on_bar_on_clicked"]
+[connection signal="on_clicked" from="places/5laobu" to="." method="_on_laobu_on_clicked"]
+[connection signal="on_clicked" from="places/6bojue" to="." method="_on_bojue_on_clicked"]
+[connection signal="on_clicked" from="places/7xiaomei" to="." method="_on_xiaomei_on_clicked"]
+[connection signal="on_clicked" from="places/8hotel" to="." method="_on_hotel_on_clicked"]

@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="Place" load_steps=2 format=3 uid="uid://cvw3h53kk18n"]
+[gd_resource type="Resource" script_class="Place" load_steps=5 format=3 uid="uid://cvw3h53kk18n"]
 
+[ext_resource type="Resource" uid="uid://cdm5aw3vrnjtn" path="res://resource/clue/clue3.tres" id="1_ei30d"]
+[ext_resource type="PackedScene" uid="uid://dahymgcuo5s3t" path="res://scene/game/testGameScene.tscn" id="1_gpooa"]
 [ext_resource type="Script" path="res://script/resource/Place.gd" id="1_jlwar"]
+[ext_resource type="Resource" uid="uid://ba2inljvpjj6i" path="res://resource/clue/clue8.tres" id="2_wpdc0"]
 
 [resource]
 script = ExtResource("1_jlwar")
 id = 0
 place_name = "巧克力店"
 position = Vector2(0, 0)
-clues = []
+clues = Array[Resource("res://script/resource/Clue.gd")]([ExtResource("1_ei30d"), ExtResource("2_wpdc0")])
+next_scene = ExtResource("1_gpooa")
+open_type = 0
+addtional_overload = 0

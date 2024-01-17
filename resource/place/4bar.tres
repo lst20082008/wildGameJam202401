@@ -1,10 +1,17 @@
-[gd_resource type="Resource" script_class="Place" load_steps=2 format=3 uid="uid://40ntdgb6uug7"]
+[gd_resource type="Resource" script_class="Place" load_steps=6 format=3 uid="uid://40ntdgb6uug7"]
 
+[ext_resource type="PackedScene" uid="uid://dahymgcuo5s3t" path="res://scene/game/testGameScene.tscn" id="1_5oneu"]
 [ext_resource type="Script" path="res://script/resource/Place.gd" id="1_70qq0"]
+[ext_resource type="Resource" uid="uid://drl8mnjw6t3rd" path="res://resource/clue/clue17.tres" id="1_ec5bj"]
+[ext_resource type="Resource" uid="uid://cc00858sgg2d0" path="res://resource/clue/clue19.tres" id="2_y46o1"]
+[ext_resource type="Resource" uid="uid://b5dr0woq425a1" path="res://resource/clue/clue20.tres" id="3_exqht"]
 
 [resource]
 script = ExtResource("1_70qq0")
 id = 4
 place_name = "酒吧"
 position = Vector2(0, 0)
-clues = []
+clues = Array[Resource("res://script/resource/Clue.gd")]([ExtResource("1_ec5bj"), ExtResource("2_y46o1"), ExtResource("3_exqht")])
+next_scene = ExtResource("1_5oneu")
+open_type = 1
+addtional_overload = 0

@@ -1,10 +1,15 @@
-[gd_resource type="Resource" script_class="Place" load_steps=2 format=3 uid="uid://7ebsp5bg64y2"]
+[gd_resource type="Resource" script_class="Place" load_steps=4 format=3 uid="uid://7ebsp5bg64y2"]
 
 [ext_resource type="Script" path="res://script/resource/Place.gd" id="1_5und4"]
+[ext_resource type="Resource" uid="uid://dl1bstsuyigmt" path="res://resource/clue/clue9.tres" id="1_06orh"]
+[ext_resource type="PackedScene" uid="uid://dahymgcuo5s3t" path="res://scene/game/testGameScene.tscn" id="1_uumhf"]
 
 [resource]
 script = ExtResource("1_5und4")
 id = 1
 place_name = "超市"
 position = Vector2(0, 0)
-clues = []
+clues = Array[Resource("res://script/resource/Clue.gd")]([ExtResource("1_06orh")])
+next_scene = ExtResource("1_uumhf")
+open_type = 2
+addtional_overload = 0

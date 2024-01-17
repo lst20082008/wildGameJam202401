@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://djoejcwmv6abg"]
+
+[ext_resource type="Script" path="res://script/UI.gd" id="1_igvc3"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_igvc3")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(300, 30)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 30.0
+offset_right = 150.0
+offset_bottom = 60.0
+grow_horizontal = 2
+max_value = 175.0
+step = 1.0
+show_percentage = false
