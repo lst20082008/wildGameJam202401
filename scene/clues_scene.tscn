@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg8vi27cqrp5d"]
+
+[ext_resource type="Script" path="res://script/CluesScene.gd" id="1_k3pq2"]
+
+[sub_resource type="Gradient" id="Gradient_csayr"]
+colors = PackedColorArray(0, 0.917792, 2.31028e-06, 1, 1, 1, 0.184314, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_voctq"]
+gradient = SubResource("Gradient_csayr")
+
+[node name="CluesScene" type="Node2D"]
+script = ExtResource("1_k3pq2")
+img_width = 64.0
+img_height = 64.0
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(574.5, 331)
+scale = Vector2(9.92188, 4.53125)
+texture = SubResource("GradientTexture2D_voctq")
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(258, 189, 890, 472)

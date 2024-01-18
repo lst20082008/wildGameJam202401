@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmijsqmiqyemd"]
+
+[ext_resource type="Script" path="res://script/DraggableObject.gd" id="1_qgxsn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hnp2"]
+size = Vector2(64, 64)
+
+[sub_resource type="Gradient" id="Gradient_sb0v1"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.79, 0.54352, 0.2212, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tmwom"]
+gradient = SubResource("Gradient_sb0v1")
+
+[node name="DraggableObject" type="Node2D"]
+script = ExtResource("1_qgxsn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(32, 32)
+shape = SubResource("RectangleShape2D_5hnp2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_tmwom")
+centered = false
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

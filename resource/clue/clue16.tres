@@ -1,10 +1,17 @@
-[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://d1ifj8f74n62a"]
+[gd_resource type="Resource" script_class="Clue" load_steps=4 format=3 uid="uid://d1ifj8f74n62a"]
 
 [ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_uruu5"]
+
+[sub_resource type="Gradient" id="Gradient_56ey1"]
+colors = PackedColorArray(0.960784, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4850b"]
+gradient = SubResource("Gradient_56ey1")
 
 [resource]
 script = ExtResource("1_uruu5")
 id = 16
+img = SubResource("GradientTexture2D_4850b")
 get_from_place_id = 8
 get_from_clues_id = Array[int]([])
 text = "伯爵与小帅当晚争吵"

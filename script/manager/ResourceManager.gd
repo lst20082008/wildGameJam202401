@@ -21,6 +21,12 @@ func get_place(n: int):
 			return place
 	return null
 
+func get_clue(n: int):
+	for c in clues:
+		if c.id == n:
+			return c
+	return null
+
 # this will change places!!!
 # this will effect game state!!!
 func _print_clues():

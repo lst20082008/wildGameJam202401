@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="Clue" load_steps=2 format=3 uid="uid://unbxsu1cqbp0"]
+[gd_resource type="Resource" script_class="Clue" load_steps=4 format=3 uid="uid://unbxsu1cqbp0"]
 
 [ext_resource type="Script" path="res://script/resource/Clue.gd" id="1_v4ctq"]
+
+[sub_resource type="Gradient" id="Gradient_dm474"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hd0lf"]
+gradient = SubResource("Gradient_dm474")
 
 [resource]
 script = ExtResource("1_v4ctq")
 id = 0
+img = SubResource("GradientTexture2D_hd0lf")
 get_from_place_id = 8
 get_from_clues_id = Array[int]([])
 text = "心肌梗死"

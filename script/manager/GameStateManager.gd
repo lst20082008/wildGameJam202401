@@ -37,6 +37,13 @@ func have_clue(n: int):
 func get_clue(n: int):
 	clues.set_bit(n, 0, true)
 
+func get_all_clues() -> Array[int]:
+	var ret: Array[int] = []
+	for i in range(clues.get_size().x):
+		if have_clue(i):
+			ret.append(i)
+	return ret
+
 func update_ui():
 	if ui == null:
 		return
