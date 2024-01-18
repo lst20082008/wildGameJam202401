@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0oaaw18x3fmx"]
+
+[ext_resource type="Script" path="res://script/Game3_script.gd" id="1_e0s84"]
+[ext_resource type="Script" path="res://script/ClickableSprite2D.gd" id="2_vxmb5"]
+[ext_resource type="PackedScene" uid="uid://djoejcwmv6abg" path="res://scene/ui_scene.tscn" id="3_4qerh"]
+
+[sub_resource type="Gradient" id="Gradient_g03jx"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_irw5e"]
+gradient = SubResource("Gradient_g03jx")
+
+[node name="TestGameScene" type="Node2D"]
+script = ExtResource("1_e0s84")
+
+[node name="sub" type="Sprite2D" parent="."]
+position = Vector2(114, 372)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_vxmb5")
+
+[node name="add" type="Sprite2D" parent="."]
+position = Vector2(223, 372)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_vxmb5")
+
+[node name="daymap" type="Sprite2D" parent="."]
+position = Vector2(115, 506)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_vxmb5")
+
+[node name="nightmap" type="Sprite2D" parent="."]
+position = Vector2(238, 510)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_vxmb5")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_4qerh")]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 245.0
+offset_top = 147.0
+offset_right = 884.0
+offset_bottom = 213.0
+
+[connection signal="on_clicked" from="sub" to="." method="_on_sub_on_clicked"]
+[connection signal="on_clicked" from="add" to="." method="_on_add_on_clicked"]
+[connection signal="on_clicked" from="daymap" to="." method="_on_daymap_on_clicked"]
+[connection signal="on_clicked" from="nightmap" to="." method="_on_nightmap_on_clicked"]

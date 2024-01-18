@@ -1,7 +1,7 @@
 extends Node
 
 # 0-175 0-100 -> normal 100-175 -> overload
-@onready var overload: int = 0
+@onready var overload: float = 0
 var clues: BitMap
 @onready var cur_time: DayTime.DayTime = DayTime.DayTime.Morning
 @onready var cur_day: int = 1
@@ -18,14 +18,14 @@ func _ready():
 	for c in [0, 16]:
 		clues.set_bit(c, 0, true)
 
-func add_overload(n: int):
+func add_overload(n):
 	overload += n
 	if overload > 175:
 		overload = 175
 		print("too overload!")
 	update_ui()
 
-func reduce_overload(n: int):
+func reduce_overload(n):
 	overload -= n
 	if overload < 0:
 		overload = 0

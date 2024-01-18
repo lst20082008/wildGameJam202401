@@ -5,5 +5,5 @@ extends CanvasLayer
 func _ready():
 	GameStateManager.ui = self
 
-func update(overload: int):
+func update(overload):
 	progress_bar.value = overload
