@@ -15,6 +15,5 @@ offset_top = 30.0
 offset_right = 150.0
 offset_bottom = 60.0
 grow_horizontal = 2
-max_value = 175.0
+max_value = 200.0
 step = 0.001
-show_percentage = false

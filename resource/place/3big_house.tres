@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://script/resource/Place.gd" id="1_qrho3"]
 [ext_resource type="Resource" uid="uid://boqkidhv0aqsx" path="res://resource/clue/clue22.tres" id="2_4pthf"]
 [ext_resource type="Resource" uid="uid://doxhler5gjxly" path="res://resource/clue/clue6.tres" id="3_5wfdx"]
-[ext_resource type="PackedScene" uid="uid://b0oaaw18x3fmx" path="res://scene/game/Game3_.tscn" id="4_3jfgc"]
+[ext_resource type="PackedScene" uid="uid://b0oaaw18x3fmx" path="res://scene/game/Game3_bigHouse.tscn" id="4_pq3o1"]
 
 [resource]
 script = ExtResource("1_qrho3")
@@ -12,6 +12,6 @@ id = 3
 place_name = "豪宅"
 position = Vector2(0, 0)
 clues = Array[Resource("res://script/resource/Clue.gd")]([ExtResource("1_fxs0x"), ExtResource("2_4pthf"), ExtResource("3_5wfdx")])
-next_scene = ExtResource("4_3jfgc")
+next_scene = ExtResource("4_pq3o1")
 open_type = 0
 addtional_overload = 0

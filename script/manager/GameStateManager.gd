@@ -21,8 +21,8 @@ func _ready():
 
 func add_overload(n):
 	overload += n
-	if overload > 175:
-		overload = 175
+	if overload > 200:
+		overload = 200
 		print("too overload!")
 	update_ui()
 

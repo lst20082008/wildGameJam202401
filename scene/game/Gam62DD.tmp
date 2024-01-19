@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://cil3b0jgr30r3"]
+
+[ext_resource type="Script" path="res://script/Game2_drugStrore.gd" id="1_8j57s"]
+[ext_resource type="Script" path="res://script/ClickableSprite2D.gd" id="2_obkum"]
+[ext_resource type="PackedScene" uid="uid://djoejcwmv6abg" path="res://scene/ui_scene.tscn" id="3_ijxa2"]
+
+[sub_resource type="Gradient" id="Gradient_g03jx"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_irw5e"]
+gradient = SubResource("Gradient_g03jx")
+
+[node name="Game2" type="Node2D"]
+script = ExtResource("1_8j57s")
+volume = null
+target_vol = null
+error_bar = null
+
+[node name="sub" type="Sprite2D" parent="."]
+position = Vector2(-88, 372)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_obkum")
+
+[node name="add" type="Sprite2D" parent="."]
+position = Vector2(895, 445)
+scale = Vector2(2.54688, 2.00782)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_obkum")
+
+[node name="daymap" type="Sprite2D" parent="."]
+position = Vector2(-87, 506)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_obkum")
+
+[node name="nightmap" type="Sprite2D" parent="."]
+position = Vector2(36, 510)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_obkum")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_ijxa2")]
+
+[node name="ProgressBar_drug" type="ProgressBar" parent="."]
+offset_left = 422.0
+offset_top = 296.0
+offset_right = 710.0
+offset_bottom = 525.0
+fill_mode = 3
+
+[node name="ProgressBar_volume" type="ProgressBar" parent="."]
+offset_left = 262.0
+offset_top = 168.0
+offset_right = 848.0
+offset_bottom = 233.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="on_clicked" from="sub" to="." method="_on_sub_on_clicked"]
+[connection signal="on_clicked" from="add" to="." method="_on_add_on_clicked"]
+[connection signal="on_clicked" from="daymap" to="." method="_on_daymap_on_clicked"]
+[connection signal="on_clicked" from="nightmap" to="." method="_on_nightmap_on_clicked"]

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Place" load_steps=5 format=3 uid="uid://u058gdh7vr6y"]
 
-[ext_resource type="PackedScene" uid="uid://dahymgcuo5s3t" path="res://scene/game/testGameScene.tscn" id="1_1lgcq"]
 [ext_resource type="Resource" uid="uid://c3pds27po720v" path="res://resource/clue/clue12.tres" id="1_orvnx"]
 [ext_resource type="Script" path="res://script/resource/Place.gd" id="1_x523a"]
 [ext_resource type="Resource" uid="uid://c6m3v1ug6o6m0" path="res://resource/clue/clue5.tres" id="2_awlw6"]
+[ext_resource type="PackedScene" uid="uid://bslfejocsjtcs" path="res://scene/game/Game6_bojue.tscn" id="3_2ak4h"]
 
 [resource]
 script = ExtResource("1_x523a")
@@ -11,6 +11,6 @@ id = 6
 place_name = "伯爵家"
 position = Vector2(0, 0)
 clues = Array[Resource("res://script/resource/Clue.gd")]([ExtResource("1_orvnx"), ExtResource("2_awlw6")])
-next_scene = ExtResource("1_1lgcq")
+next_scene = ExtResource("3_2ak4h")
 open_type = 0
 addtional_overload = 0

@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://diceq75dsca7"]
+
+[ext_resource type="Script" path="res://script/Game0_cocoa.gd" id="1_c8xdc"]
+[ext_resource type="Script" path="res://script/ClickableSprite2D.gd" id="2_keq7r"]
+[ext_resource type="PackedScene" uid="uid://djoejcwmv6abg" path="res://scene/ui_scene.tscn" id="3_h5xkt"]
+
+[sub_resource type="Gradient" id="Gradient_g03jx"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_irw5e"]
+gradient = SubResource("Gradient_g03jx")
+
+[node name="Game0" type="Node2D"]
+script = ExtResource("1_c8xdc")
+
+[node name="sub" type="Sprite2D" parent="."]
+position = Vector2(433, 422)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_keq7r")
+
+[node name="add" type="Sprite2D" parent="."]
+position = Vector2(678, 420)
+scale = Vector2(1.01562, 0.859375)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_keq7r")
+
+[node name="daymap" type="Sprite2D" parent="."]
+position = Vector2(-65, 488)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_keq7r")
+
+[node name="nightmap" type="Sprite2D" parent="."]
+position = Vector2(27, 491)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_keq7r")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_h5xkt")]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 255.0
+offset_top = 319.0
+offset_right = 872.0
+offset_bottom = 378.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="LabelTime" type="Label" parent="."]
+offset_left = 212.0
+offset_top = 90.0
+offset_right = 342.0
+offset_bottom = 187.0
+theme_override_font_sizes/font_size = 50
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="on_clicked" from="sub" to="." method="_on_sub_on_clicked"]
+[connection signal="on_clicked" from="add" to="." method="_on_add_on_clicked"]
+[connection signal="on_clicked" from="daymap" to="." method="_on_daymap_on_clicked"]
+[connection signal="on_clicked" from="nightmap" to="." method="_on_nightmap_on_clicked"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
