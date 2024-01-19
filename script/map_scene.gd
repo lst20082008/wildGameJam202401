@@ -23,8 +23,10 @@ func _click_place(idx: int):
 	if idx in can_not_go:
 		return
 	var place: Place = ResourceManager.get_place(idx)
-	print("place be clicked:" + place.place_name)
 	GameStateManager.add_overload(place.addtional_overload)
+	GameStateManager.next_clues_can_get = place.clues
+	# backup some state
+	GameStateManager.backup_before_game()
 	get_tree().change_scene_to_packed(place.next_scene)
 	pass
 
@@ -32,15 +34,11 @@ func _click_place(idx: int):
 # else return false
 func _place_can_go(idx: int):
 	var place: Place = ResourceManager.get_place(idx)
-	print("check place:" + place.place_name)
 	if place in GameStateManager.visited_places:
-		print("visited!")
 		return false
 	if place.open_type == PlaceType.PlaceType.Day and day_time != DayTime.DayTime.Morning:
-		print("day place but night!")
 		return false
 	if place.open_type == PlaceType.PlaceType.Night and day_time != DayTime.DayTime.Evening:
-		print("night place but day!")
 		return false
 	# check clues
 	# if clues_all_find return false
@@ -50,7 +48,6 @@ func _place_can_go(idx: int):
 			clues_all_find = false
 			return true
 	if clues_all_find:
-		print("clues all find")
 		return false
 	return true
 

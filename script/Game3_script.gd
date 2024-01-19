@@ -1,4 +1,4 @@
-extends Node2D
+extends GameSceneBase
 
 @export var temp = 20
 @export var max_temp = 80
@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	super()
 	progress_bar.value = temp
 	timer.start(10)
 	pass # Replace with function body.
@@ -35,13 +36,14 @@ func _on_add_on_clicked():
 	temp += randf_range(5.0,15.0)
 	pass # Replace with function body.
 	
-func _victory():
+func victory():
+	super()
 	print("wyyyyyyy")
 	print("Overload value is:", GameStateManager.overload)
-	GameStateManager.get_clue(3)
 	timer.stop()
+	SceneManager.to_next_scene()
 
 
 func _on_timer_timeout():
-	_victory()
+	victory()
 	pass # Replace with function body.

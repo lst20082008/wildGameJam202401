@@ -34,9 +34,15 @@ position = Vector2(778, 431)
 texture = SubResource("GradientTexture2D_irw5e")
 script = ExtResource("2_nite6")
 
+[node name="victory" type="Sprite2D" parent="."]
+position = Vector2(1027, 425)
+texture = SubResource("GradientTexture2D_irw5e")
+script = ExtResource("2_nite6")
+
 [node name="CanvasLayer" parent="." instance=ExtResource("3_pnnga")]
 
 [connection signal="on_clicked" from="sub" to="." method="_on_sub_on_clicked"]
 [connection signal="on_clicked" from="add" to="." method="_on_add_on_clicked"]
 [connection signal="on_clicked" from="daymap" to="." method="_on_daymap_on_clicked"]
 [connection signal="on_clicked" from="nightmap" to="." method="_on_nightmap_on_clicked"]
+[connection signal="on_clicked" from="victory" to="." method="_on_victory_on_clicked"]

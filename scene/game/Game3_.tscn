@@ -9,7 +9,7 @@
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_irw5e"]
 gradient = SubResource("Gradient_g03jx")
 
-[node name="TestGameScene" type="Node2D"]
+[node name="Game3" type="Node2D"]
 script = ExtResource("1_e0s84")
 
 [node name="sub" type="Sprite2D" parent="."]

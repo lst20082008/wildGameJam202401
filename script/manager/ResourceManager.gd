@@ -12,8 +12,6 @@ func _ready():
 	for place in DirAccess.get_files_at("res://resource/place"):
 		if place.get_extension() == "tres":
 			places.append(load("res://resource/place/" + place))
-	# testcode
-	_print_places()
 
 func get_place(n: int):
 	for place in places:

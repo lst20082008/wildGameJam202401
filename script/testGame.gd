@@ -1,7 +1,10 @@
-extends Node2D
+extends GameSceneBase
 
 @export var reduce_num: int
 @export var add_num: int
+
+func _ready():
+	super()
 
 func _on_sub_on_clicked():
 	print("sub")
@@ -25,3 +28,10 @@ func _on_daymap_on_clicked():
 func _on_nightmap_on_clicked():
 	SceneManager.change_to_night()
 	pass # Replace with function body.
+
+func victory():
+	super()
+	SceneManager.to_next_scene()
+
+func _on_victory_on_clicked():
+	victory()
