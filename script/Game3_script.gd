@@ -16,22 +16,23 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if temp > max_temp or temp < min_temp:
-		GameStateManager.reduce_overload((10 + 2.5 / GameStateManager.overload) * delta)
+		GameStateManager.reduce_overload((40 - 0.2 * GameStateManager.overload) * delta)
 	else:
 		GameStateManager.add_overload((10 + 0.4 * GameStateManager.overload + temp * 0.1) * delta)
 	temp -= randf_range(5.0,20.0) * delta
 	progress_bar.value = temp
-	print(timer.time_left)
+	if not timer.is_stopped():
+		print(timer.time_left)
 	pass
 
 
 func _on_sub_on_clicked():
-	temp -= 5
+	#temp -= 5
 	pass # Replace with function body.
 
 
 func _on_add_on_clicked():
-	temp += 10
+	temp += randf_range(5.0,15.0)
 	pass # Replace with function body.
 	
 func _victory():
